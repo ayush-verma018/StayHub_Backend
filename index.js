@@ -22,7 +22,12 @@ cloudinary.config({
   api_secret: process.env.REACT_APP_API_SECRET,
 });
 
-app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+    origin: "https://stayhub-frontend.onrender.com",
+  })
+);
 
 app.listen(process.env.PORT || 4000);
 
