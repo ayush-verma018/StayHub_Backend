@@ -22,12 +22,7 @@ cloudinary.config({
   api_secret: process.env.REACT_APP_API_SECRET,
 });
 
-app.use(
-  cors({
-    credentials: true,
-    origin: "http://localhost:5173",
-  })
-);
+app.use(cors());
 
 app.listen(process.env.PORT || 4000);
 
